@@ -31,6 +31,7 @@
 		20D0B10A16A7C558000D06C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20D0B0E516A7C558000D06C7 /* Foundation.framework */; };
 		20D0B11216A7C558000D06C7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 20D0B11016A7C558000D06C7 /* InfoPlist.strings */; };
 		20D0B11516A7C558000D06C7 /* streamingVideoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0B11416A7C558000D06C7 /* streamingVideoTests.m */; };
+		CB2BC96D16AA8A80008DA0F9 /* wifi_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = CB2BC96C16AA8A80008DA0F9 /* wifi_logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		20D0B11116A7C558000D06C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		20D0B11316A7C558000D06C7 /* streamingVideoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = streamingVideoTests.h; sourceTree = "<group>"; };
 		20D0B11416A7C558000D06C7 /* streamingVideoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = streamingVideoTests.m; sourceTree = "<group>"; };
+		CB2BC96C16AA8A80008DA0F9 /* wifi_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wifi_logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 			children = (
 				20954C6D16A8EA4C003D9C39 /* brigthness_down.png */,
 				20954C6B16A8E9B1003D9C39 /* brigthness_add.png */,
+				CB2BC96C16AA8A80008DA0F9 /* wifi_logo.png */,
 				20954C6F16A8EAB0003D9C39 /* play_back.png */,
 				20954C6916A8E5AC003D9C39 /* rec.png */,
 				20954C7116A8EAF4003D9C39 /* screen_lock.png */,
@@ -268,6 +271,7 @@
 				20954C6E16A8EA4C003D9C39 /* brigthness_down.png in Resources */,
 				20954C7016A8EAB0003D9C39 /* play_back.png in Resources */,
 				20954C7216A8EAF4003D9C39 /* screen_lock.png in Resources */,
+				CB2BC96D16AA8A80008DA0F9 /* wifi_logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
