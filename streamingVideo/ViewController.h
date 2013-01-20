@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MenuButton.h"
+#import "MenuViewController.h"
+
 
 @interface ViewController : UIViewController
 
@@ -19,5 +20,8 @@
 @property (nonatomic,strong) UIButton *theBrightnessDownBtn;
 @property (nonatomic,strong) UIButton *thePlayBackBtn;
 @property (nonatomic,strong) UIButton *theScreenLockBtn;
+
+@property (nonatomic,strong) MenuViewController* menuViewController;
+
 
 @end

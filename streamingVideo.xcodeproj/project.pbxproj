@@ -32,6 +32,9 @@
 		20D0B11216A7C558000D06C7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 20D0B11016A7C558000D06C7 /* InfoPlist.strings */; };
 		20D0B11516A7C558000D06C7 /* streamingVideoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0B11416A7C558000D06C7 /* streamingVideoTests.m */; };
 		CB2BC96D16AA8A80008DA0F9 /* wifi_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = CB2BC96C16AA8A80008DA0F9 /* wifi_logo.png */; };
+		CBE4D30416AC30C3001B3927 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE4D30216AC30C3001B3927 /* MenuViewController.m */; };
+		CBE4D30516AC30C3001B3927 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBE4D30316AC30C3001B3927 /* MenuViewController.xib */; };
+		CBE4D30816AC381E001B3927 /* bk2menuBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = CBE4D30716AC381E001B3927 /* bk2menuBtn.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +79,10 @@
 		20D0B11316A7C558000D06C7 /* streamingVideoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = streamingVideoTests.h; sourceTree = "<group>"; };
 		20D0B11416A7C558000D06C7 /* streamingVideoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = streamingVideoTests.m; sourceTree = "<group>"; };
 		CB2BC96C16AA8A80008DA0F9 /* wifi_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wifi_logo.png; sourceTree = "<group>"; };
+		CBE4D30116AC30C3001B3927 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		CBE4D30216AC30C3001B3927 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		CBE4D30316AC30C3001B3927 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		CBE4D30716AC381E001B3927 /* bk2menuBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bk2menuBtn.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +146,9 @@
 				20D0B0F316A7C558000D06C7 /* AppDelegate.m */,
 				20D0B0FB16A7C558000D06C7 /* MainStoryboard.storyboard */,
 				20D0B0FE16A7C558000D06C7 /* ViewController.h */,
+				CBE4D30116AC30C3001B3927 /* MenuViewController.h */,
+				CBE4D30216AC30C3001B3927 /* MenuViewController.m */,
+				CBE4D30316AC30C3001B3927 /* MenuViewController.xib */,
 				20D0B0FF16A7C558000D06C7 /* ViewController.m */,
 				20D0B0EA16A7C558000D06C7 /* Supporting Files */,
 			);
@@ -149,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				20954C6D16A8EA4C003D9C39 /* brigthness_down.png */,
+				CBE4D30716AC381E001B3927 /* bk2menuBtn.png */,
 				20954C6B16A8E9B1003D9C39 /* brigthness_add.png */,
 				CB2BC96C16AA8A80008DA0F9 /* wifi_logo.png */,
 				20954C6F16A8EAB0003D9C39 /* play_back.png */,
@@ -272,6 +283,8 @@
 				20954C7016A8EAB0003D9C39 /* play_back.png in Resources */,
 				20954C7216A8EAF4003D9C39 /* screen_lock.png in Resources */,
 				CB2BC96D16AA8A80008DA0F9 /* wifi_logo.png in Resources */,
+				CBE4D30516AC30C3001B3927 /* MenuViewController.xib in Resources */,
+				CBE4D30816AC381E001B3927 /* bk2menuBtn.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +322,7 @@
 				20D0B0F016A7C558000D06C7 /* main.m in Sources */,
 				20D0B0F416A7C558000D06C7 /* AppDelegate.m in Sources */,
 				20D0B10016A7C558000D06C7 /* ViewController.m in Sources */,
+				CBE4D30416AC30C3001B3927 /* MenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

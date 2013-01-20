@@ -35,6 +35,17 @@
 @synthesize thePlayBackBtn=_thePlayBackBtn;
 @synthesize theScreenLockBtn=_theScreenLockBtn;
 
+@synthesize menuViewController=_menuViewController;
+
+-(MenuViewController *)menuViewController{
+    
+    if (_menuViewController==nil) {
+        _menuViewController=[[MenuViewController alloc]initWithNibName:@"MenuViewController" bundle:nil];
+    }
+    
+    return _menuViewController;
+}
+
 -(UIButton*)theScreenLockBtn{
     if (_theScreenLockBtn==nil) {
         _theScreenLockBtn=[UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -268,7 +279,12 @@
 
 -(void)menuBtnPressed:(UIButton *)btn{
     NSLog(@"Hi");
-//    
+    
+    NSLog(@" %p ",self.menuViewController);
+    
+    // 按下Menu鍵後,進入Menu畫面
+    self.menuViewController.modalTransitionStyle=UIModalTransitionStyleCoverVertical;
+    [self presentViewController:self.menuViewController animated:YES completion:nil];
 }
 
 -(void)lockBtnPressed:(UIButton *)btn{
