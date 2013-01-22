@@ -54,6 +54,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    // 工作流程測試
+    NSLog(@"opcom");
     
     // 加入第一層黑色背景
     UIGraphicsBeginImageContext(self.view.frame.size);
