@@ -136,6 +136,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     // 加入第一層黑色背景
+    
     UIGraphicsBeginImageContext(self.view.frame.size);
     [[UIImage imageNamed:@"Default.png"]drawInRect:self.view.bounds];
     
