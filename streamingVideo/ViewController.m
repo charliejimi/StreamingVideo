@@ -72,7 +72,7 @@
     if (_theBrightnessDownBtn==nil) {
         _theBrightnessDownBtn=[UIButton buttonWithType:UIButtonTypeRoundedRect];
         //UIImage *menuImage = [UIImage imageNamed:@"rec.png"];
-        [_theBrightnessDownBtn setBackgroundImage:[UIImage imageNamed:@"TheBrightnessDownBtn.png.png"] forState:UIControlStateNormal];
+        [_theBrightnessDownBtn setBackgroundImage:[UIImage imageNamed:@"TheBrightnessDownBtn.png"] forState:UIControlStateNormal];
         
     }
     return _theBrightnessDownBtn;

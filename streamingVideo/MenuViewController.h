@@ -7,10 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WiFiSettingViewController.h"
+#import "HomeMenuVideoSettingViewController.h"
 
 @interface MenuViewController : UIViewController
 
 @property (nonatomic,strong) UIButton *bk2MenuBtn;
-
-
+@property (nonatomic,strong) UIButton *settingBtnWifi;
+@property (nonatomic,strong) UIButton *settingBtnVideoSetting;
+@property (nonatomic,strong) UIButton *settingBtnVideoMode;
+@property (nonatomic,strong) UIButton *settingBtnChooseStoragePath;
+@property (nonatomic,strong) UIButton *settingBtnResetToDefault;
+@property (nonatomic,strong) UIButton *settingBtnAbout;
+@property (nonatomic,strong) WiFiSettingViewController *wiFiSettingViewController;
+@property (nonatomic,strong) HomeMenuVideoSettingViewController *homeMenuVideoSettingViewController;
+ 
 @end
