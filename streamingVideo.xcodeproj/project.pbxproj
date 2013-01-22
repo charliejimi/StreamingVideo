@@ -31,6 +31,17 @@
 		20D0B10A16A7C558000D06C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20D0B0E516A7C558000D06C7 /* Foundation.framework */; };
 		20D0B11216A7C558000D06C7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 20D0B11016A7C558000D06C7 /* InfoPlist.strings */; };
 		20D0B11516A7C558000D06C7 /* streamingVideoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0B11416A7C558000D06C7 /* streamingVideoTests.m */; };
+		CB1FF74D16AE1D34007EF958 /* 1024x768_iOS-Background.png in Resources */ = {isa = PBXBuildFile; fileRef = CB1FF74C16AE1D34007EF958 /* 1024x768_iOS-Background.png */; };
+		CB1FF75016AE1D51007EF958 /* iOS-Background.png in Resources */ = {isa = PBXBuildFile; fileRef = CB1FF74F16AE1D51007EF958 /* iOS-Background.png */; };
+		CB1FF75216AE1D5D007EF958 /* Img_IPCamera.png in Resources */ = {isa = PBXBuildFile; fileRef = CB1FF75116AE1D5D007EF958 /* Img_IPCamera.png */; };
+		CB1FF75416AE1D6C007EF958 /* TheBrightnessDownBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = CB1FF75316AE1D6C007EF958 /* TheBrightnessDownBtn.png */; };
+		CB1FF75616AE1D73007EF958 /* TheBrightnessUpBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = CB1FF75516AE1D73007EF958 /* TheBrightnessUpBtn.png */; };
+		CB1FF75816AE1D7A007EF958 /* TheCameraBtn-Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = CB1FF75716AE1D7A007EF958 /* TheCameraBtn-Normal.png */; };
+		CB1FF75A16AE1D81007EF958 /* TheLockBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = CB1FF75916AE1D81007EF958 /* TheLockBtn.png */; };
+		CB1FF75C16AE1D8C007EF958 /* TheMenuBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = CB1FF75B16AE1D8C007EF958 /* TheMenuBtn.png */; };
+		CB1FF75E16AE1D93007EF958 /* ThePlayBackBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = CB1FF75D16AE1D93007EF958 /* ThePlayBackBtn.png */; };
+		CB1FF76016AE1D9B007EF958 /* TheRecordBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = CB1FF75F16AE1D9B007EF958 /* TheRecordBtn.png */; };
+		CB1FF76216AE1DA3007EF958 /* TheReturnBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = CB1FF76116AE1DA3007EF958 /* TheReturnBtn.png */; };
 		CB2BC96D16AA8A80008DA0F9 /* wifi_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = CB2BC96C16AA8A80008DA0F9 /* wifi_logo.png */; };
 		CBE4D30416AC30C3001B3927 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE4D30216AC30C3001B3927 /* MenuViewController.m */; };
 		CBE4D30516AC30C3001B3927 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBE4D30316AC30C3001B3927 /* MenuViewController.xib */; };
@@ -78,6 +89,17 @@
 		20D0B11116A7C558000D06C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		20D0B11316A7C558000D06C7 /* streamingVideoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = streamingVideoTests.h; sourceTree = "<group>"; };
 		20D0B11416A7C558000D06C7 /* streamingVideoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = streamingVideoTests.m; sourceTree = "<group>"; };
+		CB1FF74C16AE1D34007EF958 /* 1024x768_iOS-Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1024x768_iOS-Background.png"; sourceTree = "<group>"; };
+		CB1FF74F16AE1D51007EF958 /* iOS-Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iOS-Background.png"; sourceTree = "<group>"; };
+		CB1FF75116AE1D5D007EF958 /* Img_IPCamera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Img_IPCamera.png; sourceTree = "<group>"; };
+		CB1FF75316AE1D6C007EF958 /* TheBrightnessDownBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TheBrightnessDownBtn.png; sourceTree = "<group>"; };
+		CB1FF75516AE1D73007EF958 /* TheBrightnessUpBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TheBrightnessUpBtn.png; sourceTree = "<group>"; };
+		CB1FF75716AE1D7A007EF958 /* TheCameraBtn-Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TheCameraBtn-Normal.png"; sourceTree = "<group>"; };
+		CB1FF75916AE1D81007EF958 /* TheLockBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TheLockBtn.png; sourceTree = "<group>"; };
+		CB1FF75B16AE1D8C007EF958 /* TheMenuBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TheMenuBtn.png; sourceTree = "<group>"; };
+		CB1FF75D16AE1D93007EF958 /* ThePlayBackBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ThePlayBackBtn.png; sourceTree = "<group>"; };
+		CB1FF75F16AE1D9B007EF958 /* TheRecordBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TheRecordBtn.png; sourceTree = "<group>"; };
+		CB1FF76116AE1DA3007EF958 /* TheReturnBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TheReturnBtn.png; sourceTree = "<group>"; };
 		CB2BC96C16AA8A80008DA0F9 /* wifi_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wifi_logo.png; sourceTree = "<group>"; };
 		CBE4D30116AC30C3001B3927 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		CBE4D30216AC30C3001B3927 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
@@ -161,11 +183,22 @@
 				20954C6D16A8EA4C003D9C39 /* brigthness_down.png */,
 				CBE4D30716AC381E001B3927 /* bk2menuBtn.png */,
 				20954C6B16A8E9B1003D9C39 /* brigthness_add.png */,
+				CB1FF75316AE1D6C007EF958 /* TheBrightnessDownBtn.png */,
 				CB2BC96C16AA8A80008DA0F9 /* wifi_logo.png */,
+				CB1FF76116AE1DA3007EF958 /* TheReturnBtn.png */,
+				CB1FF74F16AE1D51007EF958 /* iOS-Background.png */,
+				CB1FF75F16AE1D9B007EF958 /* TheRecordBtn.png */,
+				CB1FF75716AE1D7A007EF958 /* TheCameraBtn-Normal.png */,
+				CB1FF75B16AE1D8C007EF958 /* TheMenuBtn.png */,
+				CB1FF75516AE1D73007EF958 /* TheBrightnessUpBtn.png */,
+				CB1FF75D16AE1D93007EF958 /* ThePlayBackBtn.png */,
+				CB1FF75916AE1D81007EF958 /* TheLockBtn.png */,
+				CB1FF75116AE1D5D007EF958 /* Img_IPCamera.png */,
 				20954C6F16A8EAB0003D9C39 /* play_back.png */,
 				20954C6916A8E5AC003D9C39 /* rec.png */,
 				20954C7116A8EAF4003D9C39 /* screen_lock.png */,
 				20954C6516A8E2DB003D9C39 /* menu.png */,
+				CB1FF74C16AE1D34007EF958 /* 1024x768_iOS-Background.png */,
 				20954C6716A8E47F003D9C39 /* camera.png */,
 				20D0B0EB16A7C558000D06C7 /* streamingVideo-Info.plist */,
 				20D0B0EC16A7C558000D06C7 /* InfoPlist.strings */,
@@ -285,6 +318,17 @@
 				CB2BC96D16AA8A80008DA0F9 /* wifi_logo.png in Resources */,
 				CBE4D30516AC30C3001B3927 /* MenuViewController.xib in Resources */,
 				CBE4D30816AC381E001B3927 /* bk2menuBtn.png in Resources */,
+				CB1FF74D16AE1D34007EF958 /* 1024x768_iOS-Background.png in Resources */,
+				CB1FF75016AE1D51007EF958 /* iOS-Background.png in Resources */,
+				CB1FF75216AE1D5D007EF958 /* Img_IPCamera.png in Resources */,
+				CB1FF75416AE1D6C007EF958 /* TheBrightnessDownBtn.png in Resources */,
+				CB1FF75616AE1D73007EF958 /* TheBrightnessUpBtn.png in Resources */,
+				CB1FF75816AE1D7A007EF958 /* TheCameraBtn-Normal.png in Resources */,
+				CB1FF75A16AE1D81007EF958 /* TheLockBtn.png in Resources */,
+				CB1FF75C16AE1D8C007EF958 /* TheMenuBtn.png in Resources */,
+				CB1FF75E16AE1D93007EF958 /* ThePlayBackBtn.png in Resources */,
+				CB1FF76016AE1D9B007EF958 /* TheRecordBtn.png in Resources */,
+				CB1FF76216AE1DA3007EF958 /* TheReturnBtn.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,7 +17,8 @@
 #define BUTTON_WIDTH  110
 #define LOGO_WIDTH  150
 #define LOGO_HEIGHT 45
-
+#define PICTURE_IP_CAMERA_HEIGHT 768
+#define PICTURE_IP_CAMERA_WIDTH 740
 
 @interface ViewController (){
     
@@ -50,7 +51,7 @@
     if (_theScreenLockBtn==nil) {
         _theScreenLockBtn=[UIButton buttonWithType:UIButtonTypeRoundedRect];
         //UIImage *menuImage = [UIImage imageNamed:@"rec.png"];
-        [_theScreenLockBtn setBackgroundImage:[UIImage imageNamed:@"screen_lock.png"] forState:UIControlStateNormal];
+        [_theScreenLockBtn setBackgroundImage:[UIImage imageNamed:@"TheLockBtn.png"] forState:UIControlStateNormal];
         
     }
     return _theScreenLockBtn;
@@ -60,7 +61,7 @@
     if (_thePlayBackBtn==nil) {
         _thePlayBackBtn=[UIButton buttonWithType:UIButtonTypeRoundedRect];
         //UIImage *menuImage = [UIImage imageNamed:@"rec.png"];
-        [_thePlayBackBtn setBackgroundImage:[UIImage imageNamed:@"play_back.png"] forState:UIControlStateNormal];
+        [_thePlayBackBtn setBackgroundImage:[UIImage imageNamed:@"ThePlayBackBtn.png"] forState:UIControlStateNormal];
         
     }
     return _thePlayBackBtn;
@@ -71,7 +72,7 @@
     if (_theBrightnessDownBtn==nil) {
         _theBrightnessDownBtn=[UIButton buttonWithType:UIButtonTypeRoundedRect];
         //UIImage *menuImage = [UIImage imageNamed:@"rec.png"];
-        [_theBrightnessDownBtn setBackgroundImage:[UIImage imageNamed:@"brigthness_down.png"] forState:UIControlStateNormal];
+        [_theBrightnessDownBtn setBackgroundImage:[UIImage imageNamed:@"TheBrightnessDownBtn.png.png"] forState:UIControlStateNormal];
         
     }
     return _theBrightnessDownBtn;
@@ -81,7 +82,7 @@
     if (_theBrightnessUpBtn==nil) {
         _theBrightnessUpBtn=[UIButton buttonWithType:UIButtonTypeRoundedRect];
         //UIImage *menuImage = [UIImage imageNamed:@"rec.png"];
-        [_theBrightnessUpBtn setBackgroundImage:[UIImage imageNamed:@"brigthness_add.png"] forState:UIControlStateNormal];
+        [_theBrightnessUpBtn setBackgroundImage:[UIImage imageNamed:@"TheBrightnessUpBtn.png"] forState:UIControlStateNormal];
         
     }
     return _theBrightnessUpBtn;
@@ -91,7 +92,7 @@
     if (_theRecBtn==nil) {
         _theRecBtn=[UIButton buttonWithType:UIButtonTypeRoundedRect];
         //UIImage *menuImage = [UIImage imageNamed:@"rec.png"];
-        [_theRecBtn setBackgroundImage:[UIImage imageNamed:@"rec.png"] forState:UIControlStateNormal];
+        [_theRecBtn setBackgroundImage:[UIImage imageNamed:@"TheRecordBtn.png"] forState:UIControlStateNormal];
         
     }
     return _theRecBtn;
@@ -101,7 +102,7 @@
     if (_theMenuBtn==nil) {
         _theMenuBtn=[UIButton buttonWithType:UIButtonTypeRoundedRect];
         //UIImage *menuImage = [UIImage imageNamed:@"menu.png"];
-        [_theMenuBtn setBackgroundImage:[UIImage imageNamed:@"menu.png"] forState:UIControlStateNormal];
+        [_theMenuBtn setBackgroundImage:[UIImage imageNamed:@"TheMenuBtn.png"] forState:UIControlStateNormal];
              
     }
     return _theMenuBtn;
@@ -122,7 +123,7 @@
     if (_theCameraBtn==nil) {
         _theCameraBtn=[UIButton buttonWithType:UIButtonTypeRoundedRect];
         //UIImage *menuImage = [UIImage imageNamed:@"camera.png"];
-        [_theCameraBtn setBackgroundImage:[UIImage imageNamed:@"camera.png"] forState:UIControlStateNormal];
+        [_theCameraBtn setBackgroundImage:[UIImage imageNamed:@"TheCameraBtn-Normal.png"] forState:UIControlStateNormal];
         
     }
     return _theCameraBtn;
@@ -134,145 +135,99 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    // 加入背景顏色
+    // 加入第一層黑色背景
     UIGraphicsBeginImageContext(self.view.frame.size);
-    [[UIImage imageNamed:@"Default.png"]drawInRect:self.view.bounds]; 
+    [[UIImage imageNamed:@"Default.png"]drawInRect:self.view.bounds];
     
     UIImage *backgroundImage=UIGraphicsGetImageFromCurrentImageContext();
     
     UIGraphicsEndImageContext();
     
     self.view.backgroundColor=[UIColor colorWithPatternImage:backgroundImage];
+    //加入第二層具logo的背景
+    UIImageView* imgViewWithLogo = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, WINDOW_WIDTH_BASE, WINDOW_HEIGHT_BASE)];
+    imgViewWithLogo.image = [UIImage imageNamed:@"iOS-Background.png"];
+    [self.view addSubview:imgViewWithLogo];
     
     //取得ipad的長(height)和寬(width)
     CGRect windowRect = [[UIScreen mainScreen]bounds];
-  
-   
-    SEL menuBtnPressed=@selector(menuBtnPressed:);
-    SEL lockBtnPressed=@selector(lockBtnPressed:);
     //長寬的scale(針對將來不同裝置的長寬考量)
     NSInteger yScale=WINDOW_HEIGHT_HORIZONTAL/WINDOW_HEIGHT_BASE;
     NSInteger xScale=WINDOW_WIDTH_HORIZONTAL/WINDOW_WIDTH_BASE;
     
+    //加入"影像"部分
+    NSInteger xCoordinateOfImgs=142;
+    NSInteger yCoordinateOfImgs=0;
+    UIImageView* imgViewFromIPCamera= [[UIImageView alloc] initWithFrame:CGRectMake(xCoordinateOfImgs*xScale,yCoordinateOfImgs*yScale, PICTURE_IP_CAMERA_WIDTH,PICTURE_IP_CAMERA_HEIGHT)];
+    imgViewFromIPCamera.image = [UIImage imageNamed:@"Img_IPCamera.png"];
+    [self.view addSubview:imgViewFromIPCamera];
+
+    
+       //加入HomeLabel
+    NSInteger xCoordinateOfLabel=16;
+    NSInteger yCoordinateOfLabel=50;
+    UILabel *label_word = [[UILabel alloc] initWithFrame:CGRectMake(xCoordinateOfLabel*xScale, yCoordinateOfLabel*xScale, 110, 50)];
+    NSString *title = [NSString stringWithFormat:@"Homeee"];
+    [label_word setText:title];
+    [label_word setNumberOfLines:2];
+    [label_word setLineBreakMode:label_word.lineBreakMode];
+    [label_word setFont:[UIFont fontWithName:@"Arial-BoldMT" size:28]];
+    [label_word setTextColor:[UIColor whiteColor]];
+    [label_word setBackgroundColor:[UIColor clearColor]];
+    [self.view addSubview:label_word];
+    
     //按鈕的xy座標(針對將來不同裝置的長寬考量)
     NSInteger xCoordinateOfBtns=0;
     NSInteger yCoordinateOfBtns=0;
-    
-    //宣告按鈕變數為menuBtn
-    //UIButton *menuBtn;
-    //self.theMenuBtn=[UIButton buttonWithType:UIButtonTypeRoundedRect];
-    xCoordinateOfBtns=20;
-    yCoordinateOfBtns=153;
+    // 加入Menubtn
+    xCoordinateOfBtns=16;
+    yCoordinateOfBtns=314;
     self.theMenuBtn.frame=CGRectMake(xCoordinateOfBtns*xScale,yCoordinateOfBtns*yScale,BUTTON_HEIGHT,BUTTON_WIDTH);
-        
+    
     [self.theMenuBtn addTarget:self
-            action:menuBtnPressed
-    forControlEvents:UIControlEventTouchDown];
-    
-    
-    //宣告按鈕上的menu圖片為menuImage變數
-    //並將menuImage設定成按鈕背景
-    //UIImage *menuImage = [UIImage imageNamed:@"menu.png"];
-    //[self.theMenuBtn setBackgroundImage:menuImage forState:UIControlStateNormal];
+                        action:@selector(menuBtnPressed:)
+              forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:self.theMenuBtn];
-    
-    //宣告按鈕變數為zoomBtn 
-//    UIButton *zoomBtn;
-//    zoomBtn=[UIButton buttonWithType:UIButtonTypeRoundedRect];
-    xCoordinateOfBtns=20;
-    yCoordinateOfBtns=313;
-    self.theZoomBtn.frame=CGRectMake(xCoordinateOfBtns*xScale,yCoordinateOfBtns*yScale,BUTTON_HEIGHT,BUTTON_WIDTH);
-    //宣告按鈕上的zoom圖片為zoomImage變數
-    //並將zoomImage設定成按鈕背景
-//    UIImage *zoomImage=[UIImage imageNamed:@"zoom.png"];
-//    [zoomBtn setBackgroundImage:zoomImage forState:UIControlStateNormal];
-    [self.view addSubview:self.theZoomBtn];
-    //宣告按鈕變數為cameraBtn
-//    UIButton *cameraBtn;
-//    cameraBtn=[UIButton buttonWithType:UIButtonTypeRoundedRect];
-    xCoordinateOfBtns=20;
-    yCoordinateOfBtns=473;
-    self.theCameraBtn.frame=CGRectMake(xCoordinateOfBtns*xScale,yCoordinateOfBtns*yScale,BUTTON_HEIGHT,BUTTON_WIDTH);
-    //宣告按鈕上的camera圖片為cameraImage變數
-    //並將cameraImage設定成按鈕背景
-//    UIImage *cameraImage=[UIImage imageNamed:@"camera.png"];
-//    [cameraBtn setBackgroundImage:cameraImage forState:UIControlStateNormal];
-    [self.view addSubview:self.theCameraBtn];
-    //宣告record變數
-//    UIButton *recordBtn;
-//    recordBtn=[UIButton buttonWithType:UIButtonTypeRoundedRect];
-    xCoordinateOfBtns=20;
-    yCoordinateOfBtns=633;
+    //加入ScreenLockBtn
+    xCoordinateOfBtns=16;
+    yCoordinateOfBtns=478;
+    self.theScreenLockBtn.frame=CGRectMake(xCoordinateOfBtns*xScale,yCoordinateOfBtns*yScale,BUTTON_HEIGHT,BUTTON_WIDTH);
+    [self.theScreenLockBtn addTarget:self
+                              action:@selector(lockBtnPressed:)
+                    forControlEvents:UIControlEventTouchDown];
+    //加入RecordBtn
+    xCoordinateOfBtns=16;
+    yCoordinateOfBtns=642;
     self.theRecBtn.frame=CGRectMake(xCoordinateOfBtns*xScale,yCoordinateOfBtns*yScale,BUTTON_HEIGHT,BUTTON_WIDTH);
-    
-    //宣告按鈕上的record圖片為recordImage變數
-    //並將recordImage設定成按鈕背景
-//    UIImage *recordImage=[UIImage imageNamed:@"rec.png"];
-//    [recordBtn setBackgroundImage:recordImage forState:UIControlStateNormal];
+    [self.theRecBtn addTarget:self
+                       action:@selector(RecBtnPressed:)
+             forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:self.theRecBtn];
     
-    //宣告brightnessUp變數
-//    UIButton *brightnessUpBtn;
-//    brightnessUpBtn=[UIButton buttonWithType:UIButtonTypeRoundedRect];
-    xCoordinateOfBtns=894;
-    yCoordinateOfBtns=153;
+    //加入BrightnessUpBtn
+    xCoordinateOfBtns=898;
+    yCoordinateOfBtns=150;
     self.theBrightnessUpBtn.frame=CGRectMake(xCoordinateOfBtns*xScale,yCoordinateOfBtns*yScale,BUTTON_HEIGHT,BUTTON_WIDTH);
-    
-    //宣告按鈕上的brightnessUp圖片為brightnessUpImage變數
-    //並將brightnessUpImage設定成按鈕背景
-//    UIImage *brightnessUpImage=[UIImage imageNamed:@"brigthness_add.png"];
-//    [brightnessUpBtn setBackgroundImage:brightnessUpImage forState:UIControlStateNormal];
     [self.view addSubview:self.theBrightnessUpBtn];
     
-    //宣告brightnessDown變數
-//    UIButton *brightnessDownBtn;
-//    brightnessDownBtn=[UIButton buttonWithType:UIButtonTypeRoundedRect];
-    xCoordinateOfBtns=894;
-    yCoordinateOfBtns=313;
+    //加入brightnessDown
+    xCoordinateOfBtns=898;
+    yCoordinateOfBtns=314;
     self.theBrightnessDownBtn.frame=CGRectMake(xCoordinateOfBtns*xScale,yCoordinateOfBtns*yScale,BUTTON_HEIGHT,BUTTON_WIDTH);
-    
-    //宣告按鈕上的brightnessDown圖片為brightnessDownImage變數
-    //並將brightnessDownImage設定成按鈕背景
-//    UIImage *brightnessDownImage=[UIImage imageNamed:@"brigthness_down.png"];
-//    [brightnessDownBtn setBackgroundImage:brightnessDownImage forState:UIControlStateNormal];
     [self.view addSubview:self.theBrightnessDownBtn];
     
-    //宣告playBack變數
-//    UIButton *playBackBtn;
-//    playBackBtn=[UIButton buttonWithType:UIButtonTypeRoundedRect];
+    //加入playBackBtn
     xCoordinateOfBtns=894;
     yCoordinateOfBtns=473;
     self.thePlayBackBtn.frame=CGRectMake(xCoordinateOfBtns*xScale,yCoordinateOfBtns*yScale,BUTTON_HEIGHT,BUTTON_WIDTH);
-    
-    //宣告按鈕上的playBack圖片為playBackImage變數
-    //並將playBackImage設定成按鈕背景
-//    UIImage *playBackImage=[UIImage imageNamed:@"play_back.png"];
-//    [playBackBtn setBackgroundImage:playBackImage forState:UIControlStateNormal];
     [self.view addSubview:self.thePlayBackBtn];
     
-    //宣告screenLock變數
-//    UIButton *screenLockBtn;
-//    screenLockBtn=[UIButton buttonWithType:UIButtonTypeRoundedRect];
-    xCoordinateOfBtns=894;
-    yCoordinateOfBtns=633;
-    self.theScreenLockBtn.frame=CGRectMake(xCoordinateOfBtns*xScale,yCoordinateOfBtns*yScale,BUTTON_HEIGHT,BUTTON_WIDTH);
-    [self.theScreenLockBtn addTarget:self
-                action:lockBtnPressed
-      forControlEvents:UIControlEventTouchDown];
-    
-    //宣告按鈕上的playBack圖片為playBackImage變數
-    //並將playBackImage設定成按鈕背景
-//    UIImage *screenLockImage=[UIImage imageNamed:@"screen_lock.png"];
-//    [screenLockBtn setBackgroundImage:screenLockImage forState:UIControlStateNormal];
+    //加入cameraBtn-Normal
+    xCoordinateOfBtns=898;
+    yCoordinateOfBtns=642;
+    self.theCameraBtn.frame=CGRectMake(xCoordinateOfBtns*xScale,yCoordinateOfBtns*yScale,BUTTON_HEIGHT,BUTTON_WIDTH);
+    [self.view addSubview:self.theCameraBtn];
     [self.view addSubview:self.theScreenLockBtn];
-    
-    //加入LOGO
-    NSInteger xCoordinateOfImgs=874;
-    NSInteger yCoordinateOfImgs=0;
-    
-    UIImageView* imgView = [[UIImageView alloc] initWithFrame:CGRectMake(xCoordinateOfImgs*xScale, yCoordinateOfImgs*yScale, LOGO_WIDTH, LOGO_HEIGHT)];
-    imgView.image = [UIImage imageNamed:@"wifi_logo.png"];
-    [self.view addSubview:imgView];
     
     
 }
