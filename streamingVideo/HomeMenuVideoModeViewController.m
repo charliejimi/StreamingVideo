@@ -143,7 +143,7 @@
     xCoordinateOfLabel=16;
     yCoordinateOfLabel=50+50;
     UILabel *label_word2 = [[UILabel alloc] initWithFrame:CGRectMake(xCoordinateOfLabel*xScale, yCoordinateOfLabel*xScale, 110, 50)];
-    title = [NSString stringWithFormat:@"Setting"];
+    title = [NSString stringWithFormat:@"Mode"];
     [label_word2 setText:title];
     [label_word2 setNumberOfLines:2];
     [label_word2 setLineBreakMode:label_word2.lineBreakMode];
