@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "WiFiSettingViewController.h"
 #import "HomeMenuVideoSettingViewController.h"
-#import "HomeMenuVideoModeViewController.h"
+//#import "HomeMenuVideoModeViewController.h"
+#import "NewHomeMenuVideoModeViewController.h"
 
 @interface MenuViewController : UIViewController
 
@@ -22,5 +23,7 @@
 @property (nonatomic,strong) UIButton *settingBtnAbout;
 @property (nonatomic,strong) WiFiSettingViewController *wiFiSettingViewController;
 @property (nonatomic,strong) HomeMenuVideoSettingViewController *homeMenuVideoSettingViewController;
-@property (nonatomic,strong) HomeMenuVideoModeViewController * homeMenuVideoModeViewController;
+//@property (nonatomic,strong) HomeMenuVideoModeViewController * homeMenuVideoModeViewController;
+@property (nonatomic,strong) NewHomeMenuVideoModeViewController *newHomeMenuVideoModeViewController;
+
 @end

@@ -38,16 +38,27 @@
 @synthesize settingBtnVideoMode=_settingBtnVideoMode;
 @synthesize wiFiSettingViewController=_wiFiSettingViewController;
 @synthesize homeMenuVideoSettingViewController=_homeMenuVideoSettingViewController;
-@synthesize homeMenuVideoModeViewController=_homeMenuVideoModeViewController;
+//@synthesize homeMenuVideoModeViewController=_homeMenuVideoModeViewController;
+@synthesize newHomeMenuVideoModeViewController=_newHomeMenuVideoModeViewController;
 
--(HomeMenuVideoModeViewController*)homeMenuVideoModeViewController{
-    
-    if (_homeMenuVideoModeViewController==nil) {
-        _homeMenuVideoModeViewController=[[HomeMenuVideoModeViewController alloc]initWithNibName:@"HomeMenuVideoModeViewController" bundle:nil];
+-(NewHomeMenuVideoModeViewController*)newHomeMenuVideoModeViewController{
+
+    if (_newHomeMenuVideoModeViewController==nil) {
+        _newHomeMenuVideoModeViewController=[[NewHomeMenuVideoModeViewController alloc]initWithNibName:@"NewHomeMenuVideoModeViewController" bundle:nil];
     }
-    
-    return _homeMenuVideoModeViewController;
+
+    return _newHomeMenuVideoModeViewController;
 }
+
+
+//-(HomeMenuVideoModeViewController*)homeMenuVideoModeViewController{
+//    
+//    if (_homeMenuVideoModeViewController==nil) {
+//        _homeMenuVideoModeViewController=[[HomeMenuVideoModeViewController alloc]initWithNibName:@"HomeMenuVideoModeViewController" bundle:nil];
+//    }
+//    
+//    return _homeMenuVideoModeViewController;
+//}
 
 -(HomeMenuVideoSettingViewController*)homeMenuVideoSettingViewController{
     
@@ -288,8 +299,9 @@
 }
 
 -(void)settingBtnVideoModdePressed:(UIButton*)btn{
-    self.homeMenuVideoModeViewController.modalTransitionStyle=UIModalTransitionStyleCoverVertical;
-    [self presentViewController:self.homeMenuVideoModeViewController animated:YES completion:nil];
+    self.newHomeMenuVideoModeViewController.modalTransitionStyle=UIModalTransitionStyleCoverVertical;
+    //self.homeMenuVideoModeViewController.modalTransitionStyle=UIModalTransitionStyleCoverVertical;
+    [self presentViewController:self.newHomeMenuVideoModeViewController animated:YES completion:nil];
     
 }
 

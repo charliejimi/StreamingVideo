@@ -32,6 +32,8 @@
 		20D0B10A16A7C558000D06C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20D0B0E516A7C558000D06C7 /* Foundation.framework */; };
 		20D0B11216A7C558000D06C7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 20D0B11016A7C558000D06C7 /* InfoPlist.strings */; };
 		20D0B11516A7C558000D06C7 /* streamingVideoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0B11416A7C558000D06C7 /* streamingVideoTests.m */; };
+		20D974BD16AF866400B1F400 /* NewHomeMenuVideoModeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D974BB16AF866400B1F400 /* NewHomeMenuVideoModeViewController.m */; };
+		20D974BE16AF866400B1F400 /* NewHomeMenuVideoModeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20D974BC16AF866400B1F400 /* NewHomeMenuVideoModeViewController.xib */; };
 		20F4E27916AE62C10077CE31 /* WiFiSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F4E27716AE62C10077CE31 /* WiFiSettingViewController.m */; };
 		20F4E27A16AE62C10077CE31 /* WiFiSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20F4E27816AE62C10077CE31 /* WiFiSettingViewController.xib */; };
 		20F4E28516AE6DD80077CE31 /* TheUpBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 20F4E28416AE6DD80077CE31 /* TheUpBtn.png */; };
@@ -100,6 +102,9 @@
 		20D0B11116A7C558000D06C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		20D0B11316A7C558000D06C7 /* streamingVideoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = streamingVideoTests.h; sourceTree = "<group>"; };
 		20D0B11416A7C558000D06C7 /* streamingVideoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = streamingVideoTests.m; sourceTree = "<group>"; };
+		20D974BA16AF866400B1F400 /* NewHomeMenuVideoModeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewHomeMenuVideoModeViewController.h; sourceTree = "<group>"; };
+		20D974BB16AF866400B1F400 /* NewHomeMenuVideoModeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewHomeMenuVideoModeViewController.m; sourceTree = "<group>"; };
+		20D974BC16AF866400B1F400 /* NewHomeMenuVideoModeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewHomeMenuVideoModeViewController.xib; sourceTree = "<group>"; };
 		20F4E27616AE62C10077CE31 /* WiFiSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WiFiSettingViewController.h; sourceTree = "<group>"; };
 		20F4E27716AE62C10077CE31 /* WiFiSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WiFiSettingViewController.m; sourceTree = "<group>"; };
 		20F4E27816AE62C10077CE31 /* WiFiSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WiFiSettingViewController.xib; sourceTree = "<group>"; };
@@ -195,6 +200,9 @@
 				20F4E27616AE62C10077CE31 /* WiFiSettingViewController.h */,
 				20F4E27716AE62C10077CE31 /* WiFiSettingViewController.m */,
 				20F4E2B116AEB8540077CE31 /* HomeMenuVideoModeViewController.h */,
+				20D974BA16AF866400B1F400 /* NewHomeMenuVideoModeViewController.h */,
+				20D974BB16AF866400B1F400 /* NewHomeMenuVideoModeViewController.m */,
+				20D974BC16AF866400B1F400 /* NewHomeMenuVideoModeViewController.xib */,
 				20F4E2B216AEB8540077CE31 /* HomeMenuVideoModeViewController.m */,
 				20F4E2B316AEB8540077CE31 /* HomeMenuVideoModeViewController.xib */,
 				20F4E29F16AEA3900077CE31 /* HomeMenuVideoSettingViewController.h */,
@@ -372,6 +380,7 @@
 				20F4E28A16AE6E0A0077CE31 /* TheDownBtn.png in Resources */,
 				20F4E2A316AEA3900077CE31 /* HomeMenuVideoSettingViewController.xib in Resources */,
 				20F4E2B516AEB8540077CE31 /* HomeMenuVideoModeViewController.xib in Resources */,
+				20D974BE16AF866400B1F400 /* NewHomeMenuVideoModeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +422,7 @@
 				20F4E27916AE62C10077CE31 /* WiFiSettingViewController.m in Sources */,
 				20F4E2A216AEA3900077CE31 /* HomeMenuVideoSettingViewController.m in Sources */,
 				20F4E2B416AEB8540077CE31 /* HomeMenuVideoModeViewController.m in Sources */,
+				20D974BD16AF866400B1F400 /* NewHomeMenuVideoModeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
