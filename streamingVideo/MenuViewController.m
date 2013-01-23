@@ -38,6 +38,16 @@
 @synthesize settingBtnVideoMode=_settingBtnVideoMode;
 @synthesize wiFiSettingViewController=_wiFiSettingViewController;
 @synthesize homeMenuVideoSettingViewController=_homeMenuVideoSettingViewController;
+@synthesize homeMenuVideoModeViewController=_homeMenuVideoModeViewController;
+
+-(HomeMenuVideoModeViewController*)homeMenuVideoModeViewController{
+    
+    if (_homeMenuVideoModeViewController==nil) {
+        _homeMenuVideoModeViewController=[[HomeMenuVideoModeViewController alloc]initWithNibName:@"HomeMenuVideoModeViewController" bundle:nil];
+    }
+    
+    return _homeMenuVideoModeViewController;
+}
 
 -(HomeMenuVideoSettingViewController*)homeMenuVideoSettingViewController{
     
@@ -254,6 +264,10 @@
     // 加入白色Video Mode
     yCoordinateOfBtns=yCoordinateOfBtns+1*SETTING_BUTTON_HEIGHT+1*INTERSPACE_BETWEEN_TWO_BUTTONS;    
     self.settingBtnVideoMode.frame=CGRectMake(xCoordinateOfBtns,yCoordinateOfBtns,SETTING_BUTTON_WIDTH,SETTING_BUTTON_HEIGHT);
+    
+    [self.settingBtnVideoMode addTarget:self
+                                    action:@selector(settingBtnVideoModdePressed:)                    forControlEvents:UIControlEventTouchDown];
+    
     [self.view addSubview:self.settingBtnVideoMode];
     // 加入白色Choose Storage Path
     yCoordinateOfBtns=yCoordinateOfBtns+1*SETTING_BUTTON_HEIGHT+1*INTERSPACE_BETWEEN_TWO_BUTTONS;
@@ -271,6 +285,12 @@
     [self.view addSubview:self.settingBtnAbout];
     
 
+}
+
+-(void)settingBtnVideoModdePressed:(UIButton*)btn{
+    self.homeMenuVideoModeViewController.modalTransitionStyle=UIModalTransitionStyleCoverVertical;
+    [self presentViewController:self.homeMenuVideoModeViewController animated:YES completion:nil];
+    
 }
 
 -(void)settingBtnVideoSettingPressed:(UIButton*)btn{

@@ -10,4 +10,11 @@
 
 @interface HomeMenuVideoModeViewController : UIViewController
 
+@property (nonatomic,strong) UIButton *bk2HomeMenuBtn;
+
+@property (nonatomic,strong) UIButton *theUpBtn;
+@property (nonatomic,strong) UIButton *theOKBtn;
+@property (nonatomic,strong) UIButton *theDownBtn;
+
+
 @end
