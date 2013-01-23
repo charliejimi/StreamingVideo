@@ -95,6 +95,7 @@
     NSInteger yScale=WINDOW_HEIGHT_HORIZONTAL/WINDOW_HEIGHT_BASE;
     NSInteger xScale=WINDOW_WIDTH_HORIZONTAL/WINDOW_WIDTH_BASE;
     
+    NSLog(@" duplicate 測試");
     // 加入第一層黑色背景
     
     UIGraphicsBeginImageContext(self.view.frame.size);
